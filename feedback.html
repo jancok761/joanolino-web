@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  background-image: url(download\ \(4\).jpeg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.feedback-container {
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  color: white;
+  border: 4px solid white;
+}
+
+.feedback-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  background: transparent;
+  color: white;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#status {
+  margin-top: 10px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+</style>
+<body>
+  <div class="feedback-container">
+    <h2>Feedback buat web ini</h2>
+    <form id="feedbackForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <p id="status"></p>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('status').textContent = "Mengirim...";
+      
+      setTimeout(() => {
+        document.getElementById('status').textContent = "Terima kasih atas feedback-nya!";
+        document.getElementById('feedbackForm').reset();
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

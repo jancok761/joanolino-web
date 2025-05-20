@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="website icon" type="png" href="download (5).jpeg">
+
+  <title>joanolino</title>
+</head>
+<body data-aos="zoom-in">
+  <nav data-aos="zoom-in" >
+    <ul>
+      <li><a href="#home">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#skill">Skill</a></li>
+      <li><a href="#feedback" id="feedbackBtn">Feedback</a></li>
+
+    </ul>
+  </nav>
+
+  <main data-aos="zoom-in">
+    <section id="hero">
+      <h2>Hi, i'm <br>Marcelino</h2>
+        <p class="desain">Front End & Desainer</p>
+        <button id="resume" class="hard">Download My CV</button>
+    </section>
+  </main>
+
+  <section id="social" data-aos="zoom-in">
+    <div class="ikon-sosial" data-aos="zoom-in">
+    <a href=" https://github.com/Panel557" target="_blank"><i class='bx bxl-github'></i></a>
+    <a href="https://www.instagram.com/jmnrlno7?igsh=aW4yYWI3dmFjaWtm " target="_blank"><i class='bx bxl-instagram'></i></a>
+    <a href=" https://www.linkedin.com/in/marcellino-jonathan-mage-teguh-6b996434a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>
+  </div>
+  </section>
+
+
+
+  <div class="container"data-aos="zoom-in"  id="about">
+    <h2 class="section-title">ABOUT ME</h2>
+    <div class="about-wrapper">
+      <img
+        class="profile-img"
+        src="ryan gosling (1).jpeg"
+        alt="Smiling man in office environment"
+      />
+      <div class="about-content" >
+        <h3>Hello, I’m Marcel</h3>
+        <p class="description">
+       I am a front-end developer with a strong interest in the world of coding and design. I focus on building clean, responsive, and user-friendly interfaces, and I enjoy transforming ideas into attractive and functional visual displays. With a background in front-end development, I am accustomed to using HTML, CSS, and JavaScript to bring designs to life in interactive websites. I believe that good design is the foundation of a satisfying user experience.
+        </p>
+        <div class="info-list">
+          <p><span>Name:</span> Marcelino Jonathan Mage Teguh</p>
+          <p><span>Address:</span> Surabaya, Jawa Timur</p>
+          <p><span>Age:</span> 17 years</p>
+          <p><span>Phone:</span> +62 881-0276-68966</p>
+          <p><span>Email:</span>vpdaeng@gmail.com</p>
+          <p><span>Tiktok</span> <a href="https://www.tiktok.com/@com.jonalinovorrer?_t=ZS-8wUGhz6LVRg&_r=1" target="_blank">Tiktok.com</a></p>
+        </div>
+        <div class="buttons">
+          <a href="Marcelino.pdf" download class="btn-download">DOWNLOAD CV</a>
+            <button class="btn-message" id="kirimPesan">SEND A MESSAGE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr>
+
+ 
+  <div class="skills-container" id="skill" data-aos="zoom-in" >
+    <h3>My Skill</h3>
+
+    <div class="skill">
+      <span>HTML</span>
+      <div class="skill-bar">
+        <div class="skill-fill html">100%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-fill css">85%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="skill-bar">
+        <div class="skill-fill js">20%</div>
+      </div>
+    </div>
+
+       <div class="skill">
+      <span>Design</span>
+      <div class="skill-bar">
+        <div class="skill-fill design">20%</div>
+      </div>
+    </div>
+
+       <div class="skill">
+      <span>Editing</span>
+      <div class="skill-bar">
+        <div class="skill-fill editing">50%</div>
+      </div>
+    </div>
+
+       <div class="skill">
+      <span>Communication</span>
+      <div class="skill-bar">
+        <div class="skill-fill communication">100%</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Joanolino. All rights reserved.</p>
+  </div>
+</footer>
+
+
+ 
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+  </script>
+
+ <script>
+  document.getElementById('feedbackBtn').addEventListener('click',function(e) {
+    e.preventDefault();
+    setTimeout(() => {
+      alert('wait....')
+         window.location.href = "feedback.html"
+    },2000)
+  })
+
+
+  document.getElementById('about').addEventListener('click', function () {
+  document.getElementById('feedbackBtn').scrollIntoView({ behavior: 'smooth' });
+
+
+});
+
+
+document.getElementById('resume').addEventListener('click', function () {
+    setTimeout(() =>{
+    alert('Scroll ke bawah untuk download CV saya')
+    }, 1500)
+  document.getElementById('social').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('kirimPesan').addEventListener('click' , function(e) {
+  e.preventDefault();
+     console.log('wait...')
+    setTimeout(() => {
+       window.location.href = "https://wa.me/62881027668966";
+    }, 1000)
+   
+})
+
+
+
+
+ </script>
+
+
+  <script>
+  AOS.init();
+</script>
+</body>
+</html>
